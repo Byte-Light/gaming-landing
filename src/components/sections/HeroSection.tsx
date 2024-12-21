@@ -5,19 +5,24 @@ const HeroSection = () => {
   return (
     <ImageSection
       image={heroImage}
-      className="bg-black bg-opacity-50"
+      className="relative bg-black bg-opacity-50"
       height="h-screen"
       sectionId="top"
     >
-      <div className="absolute left-[50%] bottom-[40%] m-auto translate-x-[-50%] space-y-6 text-center text-white sm:bottom-10">
-        <p className="text-3xl font-bold">AVAILABLE NOW</p>
-        <div className="flex flex-col items-center gap-6 sm:flex-row">
-          <button aria-label="Go to Steam page" className="btn-primary text-xl">
+      <div className="flex h-full flex-col items-center justify-center space-y-8 text-center text-white">
+        <p className="text-4xl font-extrabold tracking-wide md:text-5xl">
+          AVAILABLE NOW
+        </p>
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+          <button
+            aria-label="Go to Steam page"
+            className="rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 text-lg font-medium text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
             BUY STEAM
           </button>
           <button
             aria-label="Go to Epic Store page"
-            className="btn-primary text-xl"
+            className="rounded-full bg-gradient-to-r from-green-500 to-teal-600 px-8 py-3 text-lg font-medium text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
             BUY EPIC
           </button>

@@ -12,51 +12,36 @@ interface Props {
 
 const Navigation: FunctionComponent<Props> = (props) => {
   const {
-    className,
-    listClassName,
+    className = "",
+    listClassName = "",
     closeMenu = () => {},
-    itemClassName,
-    buttonClassName,
+    itemClassName = "",
+    buttonClassName = "",
+    mobile = false,
   } = props;
 
   return (
-    <nav aria-label="main navigation" className={className}>
-      <ul className={listClassName}>
-        <NavItem
-          title="Home"
-          path="#home"
-          closeMenu={closeMenu}
-          className={itemClassName}
-        />
-        <NavItem
-          title="About"
-          path="#about"
-          closeMenu={closeMenu}
-          className={itemClassName}
-        />
-        <NavItem
-          title="Features"
-          path="#features"
-          closeMenu={closeMenu}
-          className={itemClassName}
-        />
-        <NavItem
-          title="Media"
-          path="#media"
-          closeMenu={closeMenu}
-          className={itemClassName}
-        />
-        <NavItem
-          title="Sign Up"
-          path="#sign-up"
-          closeMenu={closeMenu}
-          className={itemClassName}
-        />
+    <nav
+      aria-label="main navigation"
+      className={`flex flex-col md:flex-row items-center justify-between ${className}`}
+    >
+      <ul
+        className={`flex flex-col md:flex-row gap-6 md:gap-8 items-center ${listClassName}`}
+      >
+        {["Home", "About", "Features", "Media", "Sign Up"].map((item, index) => (
+          <NavItem
+            key={index}
+            title={item}
+            path={`#${item.toLowerCase().replace(" ", "-")}`}
+            closeMenu={closeMenu}
+            className={`text-gray-100 hover:text-gray-900 font-medium transition-all ${itemClassName}`}
+          />
+        ))}
       </ul>
       <a
         href="#buy-cavon"
         aria-label="Buy cavon"
-        className={`btn-primary cursor-pointer px-12 ${buttonClassName}`}
+        className={`bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ${buttonClassName}`}
         onClick={() => {
           closeMenu();
         }}

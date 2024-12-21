@@ -13,10 +13,17 @@ const FeatureCard: FunctionComponent<Props> = ({
   description,
 }) => {
   return (
-    <div className="rounded bg-surface p-2 text-on-surface">
-      <Image src={image} alt="image" width={50} height={50} />
-      <h2 className="title-3">{title}</h2>
-      <p>{description}</p>
+    <div className="rounded-lg bg-white p-6 text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+      {/* Image */}
+      <div className="flex justify-center mb-4">
+        <Image src={image} alt={title} width={60} height={60} className="object-contain" />
+      </div>
+
+      {/* Title */}
+      <h2 className="text-xl font-semibold text-primary mb-2">{title}</h2>
+
+      {/* Description */}
+      <p className="text-sm text-gray-700">{description}</p>
     </div>
   );
 };

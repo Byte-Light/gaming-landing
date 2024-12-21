@@ -7,28 +7,35 @@ import Socials from "./Socials";
 const Footer = () => {
   return (
     <footer className="bg-dark-900 text-white">
-      <div className="pt-6">
+      {/* Top Section */}
+      <div className="pt-6 border-b border-dark-700">
         <Wrapper className="flex items-center justify-between">
           <Logo />
           <MoveToTop />
         </Wrapper>
       </div>
 
-      <Wrapper className="pb-6 pt-8">
-        <div className="flex flex-col-reverse items-center justify-between gap-10 py-6 sm:flex-row">
+      {/* Middle Section with Navigation and Socials */}
+      <Wrapper className="py-8">
+        <div className="flex flex-col items-center gap-10 sm:flex-row sm:justify-between">
           <Navigation
-            listClassName="flex gap-3"
-            itemClassName="!font-normal"
+            listClassName="flex gap-6 text-sm font-medium sm:flex-row"
+            itemClassName="hover:text-primary transition duration-300"
             buttonClassName="hidden"
           />
-          <Socials className="flex gap-3" itemClassName="text-3xl" />
+          <Socials className="flex gap-6 text-3xl sm:justify-end" itemClassName="hover:text-primary transition duration-300" />
         </div>
       </Wrapper>
 
-      <Wrapper className="pt-3 pb-6 text-center text-sm text-dark-700">
+      {/* Bottom Section with Copyright */}
+      <Wrapper className="pt-4 pb-6 text-center text-xs sm:text-sm text-dark-700">
         <p className="text-inherit">
           Copyright © 2025 |{" "}
-          <a href="#home" aria-label="Go to top of the page" className="link">
+          <a
+            href="#home"
+            aria-label="Go to top of the page"
+            className="link hover:text-primary transition duration-300"
+          >
             Bytelight
           </a>{" "}
           | yeamin

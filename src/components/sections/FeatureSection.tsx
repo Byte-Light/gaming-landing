@@ -12,10 +12,16 @@ import swordImage from "../../../public/images/icons/Sword.png";
 
 const FeatureSection = () => {
   return (
-    <Section sectionId="features">
+    <Section sectionId="features" className="bg-gray-900 py-16">
       <Wrapper className="text-center text-white">
-        <h1 className="title-1">Key Features</h1>
-        <div className="grid gap-6 md:grid-cols-4">
+        <h1 className="text-4xl font-extrabold tracking-wide md:text-5xl">
+          Key Features
+        </h1>
+        <p className="mt-4 text-lg text-gray-300">
+          Discover the unique features that make Cavon an extraordinary
+          adventure.
+        </p>
+        <div className="grid gap-8 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           <FeatureCard
             image={swordImage}
             title="Combat"
