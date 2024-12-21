@@ -37,7 +37,7 @@ const AboutSection = () => {
               Explore Worlds
             </h2>
             <p className="mt-2 text-gray-300">
-              Unearth the secrets of Cavon's underground society and uncover the
+              Unearth the secrets of Cavon&apos;s underground society and uncover the
               mysteries hidden within its depths.
             </p>
           </div>
